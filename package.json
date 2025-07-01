@@ -46,7 +46,6 @@
     "vite": "^7.0.0",
     "vite-plugin-vuetify": "^2.1.1",
     "vue-tsc": "^2.2.10",
-    "vuetify": "^3.8.11",
     "webfontloader": "^1.6.28"
   },
   "packageManager": "pnpm@10.12.4",

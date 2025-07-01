@@ -10,9 +10,12 @@
     handle-border-width="2"
     handle-color="#0ff00"
   >
-    <div>
-      <slot name="sidebar"></slot>
-    </div>
+    <template #default>
+      <div>
+        <slot name="sidebar"></slot>
+      </div>
+    </template>
+    <template #append> Footer sidebar </template>
   </VResizeDrawer>
   <v-app-bar color="#ff0000" elevation="3" height="56">
     <template v-if="mobile" v-slot:prepend>

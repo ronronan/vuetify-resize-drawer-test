@@ -1,9 +1,19 @@
 <template>
-  <v-navigation-drawer v-model="modelDrawer" elevation="3" color="#0ff000" width="256">
+  <VResizeDrawer
+    v-model="modelDrawer"
+    elevation="3"
+    color="#0ff000"
+    width="256"
+    max-width="356"
+    min-width="200"
+    handle-position="border"
+    handle-border-width="2"
+    handle-color="#0ff00"
+  >
     <div>
       <slot name="sidebar"></slot>
     </div>
-  </v-navigation-drawer>
+  </VResizeDrawer>
   <v-app-bar color="#ff0000" elevation="3" height="56">
     <template v-if="mobile" v-slot:prepend>
       <v-app-bar-nav-icon @click="() => (modelDrawer = !modelDrawer)" />

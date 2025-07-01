@@ -1,4 +1,5 @@
 import '@mdi/font/css/materialdesignicons.min.css';
+import { createVResizeDrawer } from '@wdns/vuetify-resize-drawer';
 import { createApp } from 'vue';
 import { createVuetify } from 'vuetify';
 import { en, fr } from 'vuetify/locale';
@@ -34,4 +35,12 @@ const vuetify = createVuetify({
   },
 });
 
-createApp(App).use(vuetify).use(router).mount('#app');
+createApp(App)
+  .use(vuetify)
+  .use(router)
+  .use(
+    createVResizeDrawer({
+      // options
+    }),
+  )
+  .mount('#app');
